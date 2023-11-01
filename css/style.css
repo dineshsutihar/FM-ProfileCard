@@ -12,9 +12,9 @@ html,body{
 body {
     background-color: hsl(185, 75%, 39%);
     background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
-    background-position: -150% 75%, 200% -40%;
     background-repeat: no-repeat, no-repeat;
 }
+
 
 /* Card section */
 .card {
@@ -23,12 +23,16 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: .75rem;
     overflow:hidden; 
-    width: 350px;
+    width: 300px;
+    transition: all 0.5s ease-in-out;
     /* centering card */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.bg_image>img{
+    width: 100%;
 }
 .profile_img{
     margin:0;
@@ -89,10 +93,50 @@ hr{
 
 
 /* Footer Section */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+
+/* Media Queries for - Mobile: 375px
+- Desktop: 1440px */
+
+@media (min-width: 375px) {
+    .card {
+        width: 350px;
+        transition: all 0.5s ease-in-out;
+    }
+    body {
+        background-color: hsl(185, 75%, 39%);
+        background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
+        background-position: 125% 62%, -20% -30%;
+        background-repeat: no-repeat, no-repeat;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@media (min-width: 1440px) {
+    .card {
+        width: 350px;
+        transition: all 0.5s ease-in-out;
+    }
+    body {
+        background-color: hsl(185, 75%, 39%);
+        background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
+        background-position: -150% 75%, 200% -40%;
+        background-repeat: no-repeat, no-repeat;
+        transition: all 0.5s ease-in-out;
+    }
 }

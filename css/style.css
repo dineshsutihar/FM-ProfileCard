@@ -134,10 +134,9 @@ footer {
     }
     body {
         background-color: hsl(185, 75%, 39%);
-        background:
-        url('./images/bg-pattern-top.svg') top left no-repeat,
-        url('./images/bg-pattern-bottom.svg') bottom right no-repeat;
-    background-position: right 52vw bottom 33vh, 48vw 52vh;;
+        background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
+        background-position: -150% 75%, 200% -40%;
+        background-repeat: no-repeat, no-repeat;
         transition: all 0.5s ease-in-out;
     }
 }
